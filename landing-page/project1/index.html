@@ -1,0 +1,86 @@
+<html lang="en"><head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Lugrasimo">
+    <title>Document</title>
+  </head>
+  
+  <body>
+    <nav>
+      <div class="nav-left" id="nav-left">
+        <a onclick="toggleNav()" href="#"><img style="border-radius: 0;" src="/resources/icons8-hamburger-menu-48.png" alt=""></a>
+        <a href="#">
+          <img src="/resources/logo.png" alt="">
+        </a>
+        <a href="#">My tournament</a>
+      </div>
+      <div class="nav-right" id="nav-right">
+        <div class="nav-link" id="nav-link">
+          <a href="#">Home</a>
+          <a href="#">Tournament</a>
+          <a href="#">Blogs</a>
+          <a href="#">Login</a>
+        </div>
+        <div class="user" id="user">
+          <a href="#" onclick="toggle('userOpt','togimg2')"><img src="/resources/icons8-user-64.png" alt="user icon">
+          <img id="togimg2" src="/resources/icons8-dropdown-50.png" alt=""></a>
+          <!-- <input type="search" class="search-input" id="searchInput" placeholder="Search..."> -->
+          <div class="user-opt" id="userOpt">
+            <ul>
+              <li><a href="">My profile</a></li>
+              <li><a href="">Dashboard</a></li>
+              <li><a href="">leaderboards</a></li>
+              <li><a href="">Notices</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="sidebar" id="sidebar">
+      <div class="side-close">
+        <a onclick="toggleNav()" href="#"><img src="/resources/icons8-cross-50.png" alt=""></a>
+      </div>
+      <div class="sidebar-content">
+        <div class="logo">
+          <img src="/resources/logo.png" alt="">
+        </div>
+        <hr>
+        <h2>Welcome,sub1</h2>
+        <hr>
+        <div class="side-main">
+          <ul>
+            <li><a href="">Link1</a></li>
+            <li><a href="">Link2</a></li>
+            <li class="dropdown">
+              <a href="#" onclick="toggle('dropdown-menu','tog-img')">Link3
+                <img id="tog-img" src="/resources/icons8-dropdown-50.png" alt="">
+              </a>
+              <ul class="dropdown-menu" id="dropdown-menu">
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+                <li><a href="">submenu</a></li>
+              </ul>
+            </li>
+            <li><a href="">Link4</a></li>
+            <li><a href="">Link5</a></li>
+          </ul>
+        </div>
+        <hr>
+        <div class="side-footer">
+          <div class="side-copy"></div>
+          <div class="side-socials"></div>
+          <div class="side-profile"></div>
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+    <script src="script.js"></script>
+  
+  
+  </body></html>
