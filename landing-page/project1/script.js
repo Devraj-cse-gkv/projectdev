@@ -13,10 +13,12 @@ function toggle(subid,timg) {
         var togImg = document.getElementById(timg);
         if (sub.style.display !== "block") {
             sub.style.display = "block";
+            sub.classList.add('active')
             togImg.style.transform = "rotate(180deg)";
         } else {
             sub.style.display = "none";
             togImg.style.transform = "rotate(0deg)";
+            sub.classList.remove('active')
 
         }
     }, 200); // Wait for 1000 milliseconds (1 second) before executing the function
