@@ -5,7 +5,8 @@
   --base-font-size: 16px;
   --black: #000000;
   --white: #ffffff;
-  --base-font: Anton;
+  --base-font:Sriracha;
+  --base-font2:Righteous;
 }
 
 body {
@@ -566,6 +567,171 @@ i {
   }
 }
 
+main{
+  min-height: 100vh;
+}
+.hero{
+  height: 500px;
+  overflow: hidden;
+  background: url(/resources/hero-egame.jpg);
+  background-position: center;
+  background-size: cover;
+  .filbtm{
+    padding: 10px;
+    background:linear-gradient(transparent,rgba(0, 0, 0, 0.893) 40%);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h1{
+      max-width: 700px;
+      color: var(--white);
+      font-size: clamp(2.8125rem, 2.2727rem + 2.6989vw, 4rem);
+      text-align: center;
+      font-weight: 700;
+      line-height: 1;
+    }
+    h2{
+      max-width: 700px;
+      margin: 20px 0;
+      color:var(--white);
+      text-align: center;
+    }
+  }
+}
+.primary-btn,.secondary-btn{
+  outline: none;
+  padding: 8px 15px;
+  border: 0;
+  font-size: 18px;
+  transition: transform 0.3s ease-in-out;
+  margin: 5px;
+  &:hover{
+    transform: scale(1.1);
+  }
+  &:active{
+    transform: scale(0.9);
+  }
+}
+
+.primary-btn{
+  background-color: var(--primary-color);
+  color: #ffffff;
+}
+
+.scroll{
+  background-color: rgba(61, 57, 57, 0.703);
+  padding: 30px;
+  display: flex;
+  overflow-x: scroll;
+  gap: 10px;
+  scroll-snap-type: x mandatory;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+.scroll:hover>.scr-card:not(:hover){
+  filter: blur(2px);
+  opacity: 0.8;
+}
+
+.scr-card{
+  position: relative;
+  background-color: rgb(34, 32, 32);
+  scroll-snap-align: start;
+  height: 240px;
+  min-width: 180px;
+  padding: 7px;
+  .scr-img{
+    height: 100px;
+    overflow: hidden;
+    margin-bottom: 5px;
+    img{
+      width: 100%;
+    }
+  }
+  h2{
+    color: rgb(255, 255, 255);
+    font-family: var(--base-font2);
+    font-size: 18px;
+  }
+  ul{
+    height: 30%;
+    overflow: hidden;
+    list-style: none;
+    margin-bottom: 8px;
+    li{
+      margin: 3px 0;
+      color: rgb(201, 201, 201);
+      font-size: 13px;
+      font-family: Sedan;
+      &:first-child{
+        color: rgb(255, 0, 187);
+      }
+      i{
+        color: rgb(178, 174, 174);
+        width: 8px;
+      }
+    }
+  }
+  .scr-btn{
+    height: 13%;
+    .scr-join{
+      font-family: var(--base-font);
+      font-size: 18px;
+      width: 72%;
+      height: 100%;
+      background-color: var(--primary-color);
+      color: white;
+      border: 0;
+      &:active{
+        transform: scale(0.9);
+      }
+    }
+    .save{
+      width: 25%;
+      height: 100%;
+      border: 0;
+      &:active{
+        transform: scale(0.9);
+      }
+      i{
+        color: black;
+        font-size: 18px;
+        margin: 0;
+      }
+    }
+  }
+  /* transition: transform 0.3s ease-in-out; */
+
+  &:hover{
+    -webkit-animation: bounce_613 0.4s linear;
+    animation: bounce_613 0.4s linear;
+    transform: scale(1.2);
+    z-index: 555;
+  }
+  .tag{
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    height: 20px;
+    background-color: rgb(255, 0, 0);
+    padding: 0 5px 0 10px;
+    color: white;
+  }
+}
+
+button{
+  cursor: pointer;
+}
+
+.section1{
+  min-height: 80vh;
+}
+
+
+
 
 
 
@@ -599,5 +765,9 @@ i {
 
   .user {
     margin-left: 5px;
+  }
+  .btn{
+    display: flex;
+    flex-direction: column;
   }
 }

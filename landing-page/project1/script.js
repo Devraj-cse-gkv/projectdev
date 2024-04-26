@@ -35,3 +35,48 @@ function togSide(){
         togimg.style.transform = "rotateX(0deg)";
     }
 }
+
+
+import {events, templates } from '/data.js';
+console.log(templates[0].card)
+
+function createplaylistcard(templatePath, data, sectionId) {
+    // Fetch the template from the provided path
+            // Loop through each data item
+            let templateStr = templatePath.card
+            data.forEach(res => {
+                // Create a new DOM element from the fetched template
+                const card = document.createElement('div');
+                // adding class to the card
+                card.classList.add('scr-card');
+                card.innerHTML = templateStr;
+                // Update the content with res data
+                card.querySelector('h2').textContent = res.name;
+                card.querySelector('img').src = res.image;
+                card.querySelector('#price').textContent = res.price;
+                card.querySelector('.tag').textContent = res.status;
+                card.querySelector('#schedule').textContent = res.schedule;
+                card.querySelector('#mode').textContent = res.mode;
+                
+                // Get the play button element
+                const joinButton = card.querySelector('.scr-join');
+
+                // Add event listener to the play button
+                joinButton.addEventListener('click', function () {
+                    // Call the play function with the res ID
+                    play(res.name);
+                });
+
+                // Append the card to the container
+                document.querySelector(sectionId).appendChild(card);
+            });
+}
+
+// Play function to handle play button click
+function play(resId) {
+    alert('Play button clicked for res ID: ' + resId);
+}
+
+// Call the create function with template path, data, and sectionId
+createplaylistcard(templates[0], events, '#scroll');
+
